@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         builder: (context,child) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            title: 'Flutter Demo',
+            title: 'Restaurent demo',
             theme: ThemeData(
               textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
               scaffoldBackgroundColor: AppColor.primaryBgColor,
