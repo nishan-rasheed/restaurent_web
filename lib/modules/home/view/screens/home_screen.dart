@@ -17,8 +17,14 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: 
-      Padding(
+      Container(
+
         padding:  EdgeInsets.symmetric(horizontal: 50.w,vertical: 50.h),
+        decoration: BoxDecoration(
+          image: DecorationImage(image: AssetImage(AppAssets.backgroundImage),
+          fit: BoxFit.cover
+          )
+        ),
         child: Column(
           children: [
             Row(mainAxisAlignment: MainAxisAlignment.spaceAround,

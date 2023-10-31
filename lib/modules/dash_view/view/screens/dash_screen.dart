@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:restaurent_web/modules/home/view/screens/home_screen.dart';
 import 'package:restaurent_web/modules/services/view/screens/services_screen.dart';
 
@@ -30,10 +31,7 @@ class DashScreens extends StatelessWidget {
       )
     );
   }
-
- 
 }
-
 
 class CustomPageViewScrollPhysics extends ScrollPhysics {
   const CustomPageViewScrollPhysics({ScrollPhysics? parent})
