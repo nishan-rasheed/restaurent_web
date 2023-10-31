@@ -9,6 +9,8 @@ import 'package:restaurent_web/utils/constants/app_spaces.dart';
 import 'package:restaurent_web/utils/constants/app_styles.dart';
 import 'package:restaurent_web/utils/constants/common_text.dart';
 
+import '../widgets/features_widget.dart';
+
 class ServicesScreen extends StatelessWidget {
   const ServicesScreen({Key? key}) : super(key: key);
 
@@ -16,10 +18,7 @@ class ServicesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   var animDuration=1000.ms;
-   var splashDelay=0.ms;
-   var imageDelay=0.ms;
-   var textDelay=0.ms;
+   var animDuration=800.ms;
 
 
     return Scaffold(
@@ -32,17 +31,18 @@ class ServicesScreen extends StatelessWidget {
             children: [
               FeaturesWidget(
                 animDuration: animDuration,
+                splashDelay: 0.ms,
                 image:AppAssets.foodImage ,
                 text:'vdhmv dhbdmn dnhdvnb dnvndbd nb dhdb ' ,),
               FeaturesWidget(
                 animDuration: animDuration,
-                splashDelay: 1000.ms,
-
+                splashDelay:1000.ms,
                 image:AppAssets.offerImage ,
                 text:'Spediaj ssmn s nvdmndmn d',),  
 
                FeaturesWidget(
                 animDuration: animDuration,
+                splashDelay:2000.ms,
                 image:AppAssets.deliveryImage ,
                 text:'fast delivery',),   
               //
@@ -55,63 +55,3 @@ class ServicesScreen extends StatelessWidget {
   }
 }
 
-class FeaturesWidget extends StatelessWidget {
-  const FeaturesWidget({
-    super.key, 
-    required this.animDuration, 
-    required this.text, 
-    required this.image, 
-    this.splashDelay, this.imageDelay, this.textDelay,
-  });
-
-  final Duration animDuration;
-  final Duration? splashDelay;
-  final Duration? imageDelay;
-  final Duration? textDelay;
-  final String text;
-  final String image;
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: 300.w,
-      child: Column(
-        children: [
-          Stack(
-            clipBehavior: Clip.none,
-            alignment: Alignment.center,
-            children: [
-              
-           SvgPicture.asset(AppIcons.splashBox,
-              width: 300.w,height: 200.h,
-              fit: BoxFit.fill,).animate()
-              .scaleXY(
-                begin: 0,
-                end: 1,
-                duration: animDuration,
-                curve: Curves.easeInOutCubic),
-
-
-              Image.asset(AppAssets.foodImage,
-              height: 150.h,width: 150.h
-              ).animate(delay:animDuration+200.ms)
-                .slideY(
-                    begin: -20,
-                    end: 0,
-                    duration: animDuration,
-                    curve: Curves.easeInOutCubic)
-            ],
-          ),
-          CommonText(text: 'shvnvnsbvs hnbmsnvmsn smbsnm mx mxsnb sbns',
-          textAlign: TextAlign.center,
-                         textStyle: AppStyles.st20600,).
-                         animate(delay:animDuration+1000.ms )
-            .slideX(
-            begin: 20,
-            end: 0,
-            duration: 1000.ms,
-            curve: Curves.easeInOutCubic)
-        ],
-      ),
-    );
-  }
-}

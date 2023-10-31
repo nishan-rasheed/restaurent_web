@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -27,6 +29,9 @@ class MyApp extends StatelessWidget {
         designSize:const Size(1280, 832),
         builder: (context,child) {
           return MaterialApp(
+            scrollBehavior: const MaterialScrollBehavior().copyWith(
+                    dragDevices: {PointerDeviceKind.mouse},
+                  ),
             debugShowCheckedModeBanner: false,
             title: 'Restaurent demo',
             theme: ThemeData(

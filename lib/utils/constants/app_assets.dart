@@ -3,4 +3,9 @@ class AppAssets{
   static const deliveryImage = 'assets/images/delivery.png';
   static const offerImage = 'assets/images/offer.png';
   static const backgroundImage = 'assets/images/backgroundImage.png';
+  static const food1Image = 'assets/images/foods1.png';
+  static const food2Image = 'assets/images/foods2.png';
+  static const food3Image = 'assets/images/foods3.png';
+  static const food4Image = 'assets/images/foods4.png';
+  static const food5Image = 'assets/images/foods5.png';
 }

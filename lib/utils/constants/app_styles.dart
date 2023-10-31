@@ -25,11 +25,19 @@ class AppStyles{
 
  //20-600
 
- static  TextStyle  st20600 = TextStyle(
+ static  TextStyle  st20600 = GoogleFonts.loveYaLikeASister(
   color: AppColor.textColor,
   fontSize: 20.sp,
   fontWeight: FontWeight.w600,
  );
+
+//20-600
+
+ static  TextStyle  specialst20600 = TextStyle(
+  color: AppColor.textColor,
+  fontSize: 20.sp,
+  fontWeight: FontWeight.w600,
+ ); 
 
 
 }
