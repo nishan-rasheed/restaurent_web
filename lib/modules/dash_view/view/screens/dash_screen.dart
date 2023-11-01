@@ -18,7 +18,8 @@ class DashScreens extends StatelessWidget {
     return Scaffold(
       body:
       PageView(
-        // physics: const CustomPageViewScrollPhysics(),
+      // physics: NeverScrollableScrollPhysics(),
+      //const CustomPageViewScrollPhysics(),
         // pageSnapping: false,
         controller: pageController,
         // allowImplicitScrolling: true,
@@ -26,7 +27,7 @@ class DashScreens extends StatelessWidget {
         children: [
           HomeScreen(controller: pageController,),
           const ServicesScreen(),
-          ProductScreen(),
+          const ProductScreen(),
           Container(height: maxHeight,width: maxWidth,color: Colors.teal,),
         ],
       )

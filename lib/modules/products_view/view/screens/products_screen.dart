@@ -44,7 +44,8 @@ class ProductScreen extends StatelessWidget {
 
                         RatingBarIndicator(
                           rating: 2.75,
-                          itemBuilder: (context, index) => Icon(
+                          itemBuilder: (context, index) =>
+                           Icon(
                               Icons.star,
                               color: Colors.amber,
                           ),

@@ -31,7 +31,7 @@ class HomeScreen extends StatelessWidget {
               children: [
                 InkWell(
                   onTap: () {
-                  controller?.animateToPage(2, duration:const Duration(milliseconds: 600), curve: Curves.easeIn);
+                  controller?.animateToPage(1, duration:const Duration(milliseconds: 600), curve: Curves.easeIn);
                   },
                   child: CommonText(text: 'Home',
                   textStyle: AppStyles.st12500,),
