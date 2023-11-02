@@ -4,7 +4,7 @@ class CommonText extends StatelessWidget {
   const CommonText({Key? key, 
   required this.text, 
   this.maxlines, 
-  this.textAlign, 
+  this.textAlign= TextAlign.center, 
   this.textStyle}) : super(key: key);
 
 

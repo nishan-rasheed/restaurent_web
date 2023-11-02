@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:restaurent_web/modules/feedback/view/screens/feedback_screen.dart';
 import 'package:restaurent_web/modules/home/view/screens/home_screen.dart';
 import 'package:restaurent_web/modules/products_view/view/screens/products_screen.dart';
 import 'package:restaurent_web/modules/services/view/screens/services_screen.dart';
@@ -28,7 +29,7 @@ class DashScreens extends StatelessWidget {
           HomeScreen(controller: pageController,),
           const ServicesScreen(),
           const ProductScreen(),
-          Container(height: maxHeight,width: maxWidth,color: Colors.teal,),
+          FeedBackScreen(),
         ],
       )
     );

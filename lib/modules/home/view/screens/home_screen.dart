@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
       Container(
 
         padding:  EdgeInsets.symmetric(horizontal: 50.w,vertical: 50.h),
-        decoration: BoxDecoration(
+        decoration:const BoxDecoration(
           image: DecorationImage(image: AssetImage(AppAssets.backgroundImage),
           fit: BoxFit.cover
           )
@@ -36,10 +36,20 @@ class HomeScreen extends StatelessWidget {
                   child: CommonText(text: 'Home',
                   textStyle: AppStyles.st12500,),
                 ),
-                CommonText(text: 'Services',
-                textStyle: AppStyles.st12500,),
-                CommonText(text: 'Dishes',
-                textStyle: AppStyles.st12500,),
+                InkWell(
+                  onTap: () {
+                  controller?.animateToPage(1, duration:const Duration(milliseconds: 600), curve: Curves.easeIn);
+                  },
+                  child: CommonText(text: 'Services',
+                  textStyle: AppStyles.st12500,),
+                ),
+                InkWell(
+                  onTap: () {
+                    controller?.animateToPage(2, duration:const Duration(milliseconds: 600), curve: Curves.easeIn);
+                  },
+                  child: CommonText(text: 'Dishes',
+                  textStyle: AppStyles.st12500,),
+                ),
                 CommonText(text: 'Feedbacks',
                 textStyle: AppStyles.st12500,),
               ],
