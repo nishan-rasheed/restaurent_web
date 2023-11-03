@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
                     dragDevices: {PointerDeviceKind.mouse},
                   ),
             debugShowCheckedModeBanner: false,
-            title: 'Restaurent demo',
+            title: 'Restaurent demo Website',
             theme: ThemeData(
               textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
               scaffoldBackgroundColor: AppColor.primaryBgColor,
