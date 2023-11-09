@@ -10,45 +10,61 @@ class DashScreens extends StatelessWidget {
    DashScreens({Key? key}) : super(key: key);
 
   PageController pageController = PageController();
+  bool pageIsScrolling = false;
+
 
   @override
   Widget build(BuildContext context) {
-    final maxWidth = MediaQuery.of(context).size.width;
-    final maxHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
       body:
-      PageView(
-      // physics: NeverScrollableScrollPhysics(),
-      //const CustomPageViewScrollPhysics(),
-        // pageSnapping: false,
-        controller: pageController,
-        // allowImplicitScrolling: true,
-        scrollDirection: Axis.vertical,
-        children: [
-          HomeScreen(controller: pageController,),
-          const ServicesScreen(),
-          const ProductScreen(),
-          FeedBackScreen(),
-        ],
+      Listener(
+        onPointerMove: (pointerMove) {
+                  _onScroll(pointerMove.delta.dy * -1);
+                  print(pointerMove.delta.dy);
+                },
+                onPointerSignal: (pointerSignal) {
+                  if (pointerSignal is PointerScrollEvent) {
+                    _onScroll(pointerSignal.scrollDelta.dy);
+                    print(pointerSignal.scrollDelta.dy);
+                  }
+                },
+        child: PageView(
+        physics:const NeverScrollableScrollPhysics(),
+          controller: pageController,
+          scrollDirection: Axis.vertical,
+          children: [
+            HomeScreen(controller: pageController,),
+            const ServicesScreen(),
+            const ProductScreen(),
+            const FeedBackScreen(),
+          ],
+        ),
       )
     );
   }
-}
 
-class CustomPageViewScrollPhysics extends ScrollPhysics {
-  const CustomPageViewScrollPhysics({ScrollPhysics? parent})
-      : super(parent: parent);
+  
+ void _onScroll(double offset) {
+    if (pageIsScrolling == false) {
+      pageIsScrolling = true;
+      if (offset > 0) {
+        pageController
+            .nextPage(
+                duration:const Duration(milliseconds: 300),
+                curve: Curves.easeInOut)
+            .then((value) => pageIsScrolling = false);
 
-  @override
-  CustomPageViewScrollPhysics applyTo(ScrollPhysics? ancestor) {
-    return CustomPageViewScrollPhysics(parent: buildParent(ancestor));
+        print('scroll down');
+      } else {
+        pageController
+            .previousPage(
+                duration:const Duration(milliseconds: 300),
+                curve: Curves.easeInOut)
+            .then((value) => pageIsScrolling = false);
+        print('scroll up');
+      }
+    }
   }
 
-  @override
-  SpringDescription get spring => const SpringDescription(
-        mass: 80,
-        stiffness: 100,
-        damping: 1,
-      );
 }
