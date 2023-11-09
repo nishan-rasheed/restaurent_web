@@ -7,7 +7,7 @@ import 'package:restaurent_web/utils/constants/app_color.dart';
 import 'package:restaurent_web/utils/constants/app_icons.dart';
 import 'package:restaurent_web/utils/constants/app_spaces.dart';
 import 'package:restaurent_web/utils/constants/app_styles.dart';
-import 'package:restaurent_web/utils/constants/common_text.dart';
+import 'package:restaurent_web/utils/widgets/common_text.dart';
 
 import '../widgets/features_widget.dart';
 
@@ -22,32 +22,34 @@ class ServicesScreen extends StatelessWidget {
 
 
     return Scaffold(
-      body: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      body: Column(
         children: [
           CommonText(text: 'What we serve?',
           textStyle: AppStyles.stHeading,),
 
-          Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              FeaturesWidget(
-                animDuration: animDuration,
-                splashDelay: 0.ms,
-                image:AppAssets.foodImage ,
-                text:'vdhmv dhbdmn dnhdvnb dnvndbd nb dhdb ' ,),
-              FeaturesWidget(
-                animDuration: animDuration,
-                splashDelay:1000.ms,
-                image:AppAssets.offerImage ,
-                text:'Spediaj ssmn s nvdmndmn d',),  
-
-               FeaturesWidget(
-                animDuration: animDuration,
-                splashDelay:2000.ms,
-                image:AppAssets.deliveryImage ,
-                text:'fast delivery',),   
-              //
-             
-            ],
+          Expanded(
+            child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                FeaturesWidget(
+                  animDuration: animDuration,
+                  splashDelay: 0.ms,
+                  image:AppAssets.foodImage ,
+                  text:'vdhmv dhbdmn dnhdvnb dnvndbd nb dhdb ' ,),
+                FeaturesWidget(
+                  animDuration: animDuration,
+                  splashDelay:1000.ms,
+                  image:AppAssets.offerImage ,
+                  text:'Spediaj ssmn s nvdmndmn d',),  
+                    
+                 FeaturesWidget(
+                  animDuration: animDuration,
+                  splashDelay:2000.ms,
+                  image:AppAssets.deliveryImage ,
+                  text:'fast delivery',),   
+                //
+               
+              ],
+            ),
           )
         ],
       ),

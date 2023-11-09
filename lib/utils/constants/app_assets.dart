@@ -9,4 +9,6 @@ class AppAssets{
   static const food4Image = 'assets/images/foods4.png';
   static const food5Image = 'assets/images/foods5.png';
   static const dpImage = 'assets/images/dp1.jpg';
+
+  static const feedbackImage = 'assets/images/feedbackImage.png';
 }

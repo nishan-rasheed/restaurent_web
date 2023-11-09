@@ -7,7 +7,8 @@ import 'package:restaurent_web/utils/constants/app_color.dart';
 import 'package:restaurent_web/utils/constants/app_spaces.dart';
 
 import '../../../../utils/constants/app_styles.dart';
-import '../../../../utils/constants/common_text.dart';
+import '../../../../utils/widgets/common_button.dart';
+import '../../../../utils/widgets/common_text.dart';
 
 class ProductScreen extends StatelessWidget {
   const ProductScreen({super.key});
@@ -67,12 +68,9 @@ class ProductScreen extends StatelessWidget {
             
                           // cm10Width,
                 
-                          Container(
-                            alignment: Alignment.center,
-                            color: AppColor.secondoryBgColor,
-                            height: 50.h,width: 200.w,
-                            child: CommonText(text: 'Add to cart',
-                            textStyle: AppStyles.st20600,),
+                          CommonButtonWidget(
+                          text:'Add to cart',
+                          onTap: () {},
                           )
                         ],
                       )
@@ -87,3 +85,4 @@ class ProductScreen extends StatelessWidget {
     );
   }
 }
+

@@ -6,7 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../utils/constants/app_assets.dart';
 import '../../../../utils/constants/app_icons.dart';
 import '../../../../utils/constants/app_styles.dart';
-import '../../../../utils/constants/common_text.dart';
+import '../../../../utils/widgets/common_text.dart';
 
 class FeaturesWidget extends StatelessWidget {
   const FeaturesWidget({

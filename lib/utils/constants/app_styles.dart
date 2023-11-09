@@ -9,9 +9,15 @@ class AppStyles{
 
  static  TextStyle  stHeading = GoogleFonts.loveYaLikeASister(
   color: AppColor.textColor,
-  fontSize: 60.sp,
+  fontSize:1.sw<768?25.sp: 60.sp,
   fontWeight: FontWeight.w500,
  );  
+
+//  static  TextStyle  stMbHeading = GoogleFonts.loveYaLikeASister(
+//   color: AppColor.textColor,
+//   fontSize: 25.sp,
+//   fontWeight: FontWeight.w500,
+//  );
 
 
 //12-500
