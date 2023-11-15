@@ -3,13 +3,15 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"assets/AssetManifest.bin": "99c3272459ee00723c7407e26285ab29",
-"assets/AssetManifest.json": "c9fd998d2c448e6338de5e73179f44ee",
+const RESOURCES = {"assets/AssetManifest.bin": "190611d43f52e84c5b891aae1d403724",
+"assets/AssetManifest.json": "5843ce9679611420a694b61ae78a2085",
+"assets/assets/icons/feedbackSvg.svg": "a43b8efaccd099c7a6a1864c74757dae",
 "assets/assets/icons/splashBox.svg": "60b24b723a26902c9c3e81c72bd5b08e",
 "assets/assets/images/backgroundImage.png": "4d7d35fc9a9fdac4134461c92c3dd287",
 "assets/assets/images/delivery.png": "77517c2245856fc322d9ec535de768c1",
 "assets/assets/images/dp1.jpg": "f75b90c08c6181a6b09b91a7c8b74ee4",
 "assets/assets/images/dp2.jpg": "b25546c2f7fb551a20719eef67e9dc36",
+"assets/assets/images/feedbackImage.png": "07063d4791819feab1932bd66b773011",
 "assets/assets/images/food.png": "c45989d9a2c7ecd074f2a4e4e54e398f",
 "assets/assets/images/foods1.png": "36bd3a2bde42e582b2f1130cec2e941d",
 "assets/assets/images/foods2.png": "522343a634b19609e1a7aa4c07c1f06f",
@@ -35,9 +37,9 @@ const RESOURCES = {"assets/AssetManifest.bin": "99c3272459ee00723c7407e26285ab29
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "e7e97a8a895a028cbbf6ad1e17a8a464",
-"/": "e7e97a8a895a028cbbf6ad1e17a8a464",
-"main.dart.js": "3ad6813c137d7cbd392aafa16c71bc96",
+"index.html": "8ec8e67da598b468ca93bfd7658c3e77",
+"/": "8ec8e67da598b468ca93bfd7658c3e77",
+"main.dart.js": "11396e2694924aae2ab531491714525e",
 "manifest.json": "f2714fcb118c7f3be56502db6d0fc377",
 "version.json": "3dba385e6d7a7cdb1627e2816acde8d7"};
 // The application shell files that are downloaded before a service worker can
